@@ -11,7 +11,7 @@ router.route("/shortner").post(async (request, response) => {
   const longUrl = await createUrl(url, shortId);
   const urlData = await getShortUrl(url);
   const shortUrl = urlData.shortId;
-  const newUrl = `https://nodeurlapp.herokuapp.com/urlshort/${shortUrl}`;
+  const newUrl = `https://nodeurl.herokuapp.com/urlshort/${shortUrl}`;
   response.send({ urlSh: newUrl });
 });
 
